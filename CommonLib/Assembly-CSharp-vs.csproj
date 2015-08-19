@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{0800AD63-AE6E-27ED-DB54-96BE7DFA77C1}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\MyLib\Scripts\CreateElement.cs" />
+     <Compile Include="Assets\MyLib\Scripts\DragTest.cs" />
+     <Compile Include="Assets\MyLib\Scripts\ExtendClass.cs" />
+     <Compile Include="Assets\MyLib\Scripts\GAFTest.cs" />
+     <Compile Include="Assets\MyLib\Scripts\MaterialController.cs" />
+     <Compile Include="Assets\MyLib\Scripts\RoleController.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\Mesh\MeshPanel.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAction.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAniCallBack.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAniDuration.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAniParallel.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAniSequence.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyAnimator.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyBaseAnimationNormal.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyBaseAnimationObject.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyBaseSequence.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyBezierCurve.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyBezierCurveOject.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyColorAnimation.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyCustomParticleSystem.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyDelayAnimation.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyFlash.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyMoveByCurve.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyRestParticleSystemShape.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkySetParticleSortingLayer.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\SkyUtil.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\BMFont.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\BMFontReader.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\BMGlyph.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\BetterList.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\ByteReader.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyCustomFont\MyFont.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyGameCamera.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\SkyElementBase.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\SkyElementConfig.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\SkyScrollPanel.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\SkyScrollRect.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\sample\ElementButton.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\sample\ElementButtonConfig.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\sample\ItemPlistConfig.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SrcollList\sample\MyScrollPanel.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\SkyResizeScale.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\SpriteText\SpriteTexConfig.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\SpriteText\SpriteTextPanel.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\UIWindow.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\ResizeByAuto.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\ResizeBySetting.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\ResizeDialog.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\SharedPrefs.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\SkySreenUtils.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\SkyTime.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\UI\Utils\TimeRecord.cs" />
+     <Compile Include="Assets\MyLib\Scripts\SkyDragEvent.cs" />
+     <Compile Include="Assets\MyLib\Scripts\TestExtend.cs" />
+     <Compile Include="Assets\MyLib\Scripts\TestForEditor.cs" />
+     <Compile Include="Assets\MyLib\Scripts\UITest.cs" />
+     <None Include="Assets\MyLib\Shaders\UVAnimation.shader" />
+     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\MyLib\Shaders\imageShime.shader" />
+     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+     <None Include="Assets\Demigiant\DemiLib\DemiLib.xml" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
+     <None Include="Assets\Libs\codeandweb.com\Readme.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>/Users/wyk/Documents/UnityProject/CommonLib/CommonLib/Assets/Demigiant/DemiLib/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/wyk/Documents/UnityProject/CommonLib/CommonLib/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/wyk/Documents/UnityProject/CommonLib/CommonLib/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/wyk/Documents/UnityProject/CommonLib/CommonLib/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>/Users/wyk/Documents/UnityProject/CommonLib/CommonLib/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
