@@ -52,7 +52,7 @@ public class SkyBezierEditor : Editor
 		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("animY"));
 		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("startPoint"));
 		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("endPoint"));
-		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("timeDuration"));
+//		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("timeDuration"));
 		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("keyFrame"));
 		EditorGUILayout.PropertyField (skyBezierCurve.FindPropertyRelative ("middlePoints"));
 

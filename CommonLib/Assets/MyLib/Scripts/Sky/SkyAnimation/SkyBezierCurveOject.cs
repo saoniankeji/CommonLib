@@ -50,6 +50,7 @@ public class SkyBezierCurveOject : SkyBaseAnimationObject
 	public void computePath ()
 	{
 		if (isDirty) {
+			skyBezierCurve.timeDuration = PlayTime;
 			skyBezierCurve.CreateCurve2 ();
 			isDirty = false;
 		}
@@ -57,7 +58,7 @@ public class SkyBezierCurveOject : SkyBaseAnimationObject
 
 	public virtual void UpdateAnimation (float time)
 	{
-		transform.localScale = new Vector3 (((1 - time / skyBezierCurve.timeDuration) * 0.3f + 0.7f), ((1 - time / skyBezierCurve.timeDuration)) * 0.3f + 0.7f, 0);
+		transform.localScale = new Vector3 (((1 - time / skyBezierCurve.timeDuration) * 0.3f + 0.7f), ((1 - time / skyBezierCurve.timeDuration)) * 0.3f + 0.7f, 1);
 		transform.localPosition = new Vector3 (skyBezierCurve.animX.Evaluate (time / skyBezierCurve.timeDuration), skyBezierCurve.animY.Evaluate (time / skyBezierCurve.timeDuration), 0);
 	}
 
