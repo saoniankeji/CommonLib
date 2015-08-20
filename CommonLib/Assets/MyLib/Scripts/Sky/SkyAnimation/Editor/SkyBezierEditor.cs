@@ -89,7 +89,7 @@ public class SkyBezierEditor : Editor
 		}
 
 		if (GUILayout.Button (playContent, EditorStyles.miniButtonMid, colorWidth)) {
-			((SkyBezierCurveOject)target).PlayLoop();
+			((SkyBezierCurveOject)target).Play ();
 		}
 		
 		if (

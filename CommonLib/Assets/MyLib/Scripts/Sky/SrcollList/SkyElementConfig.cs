@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 namespace UI.UIComponent.ScrollList
@@ -6,7 +6,7 @@ namespace UI.UIComponent.ScrollList
 		public class SkyElementConfig : MonoBehaviour
 		{
 
-				public virtual int getCount ()
+				public virtual int GetCount ()
 				{
 						return 0;
 				}

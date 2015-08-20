@@ -9,9 +9,10 @@ namespace UI.UIComponent.ScrollList
 
 				protected SkyScrollPanel MySkyScrollPanel;
 			
-				public virtual void Init (int index, SkyScrollPanel mySkyScrollPanel)
+				public virtual bool Init (int index, SkyScrollPanel mySkyScrollPanel)
 				{
 						this.MySkyScrollPanel = mySkyScrollPanel;
+                        return true;
 				}
 
 				public virtual void OnPointerDown (PointerEventData eventData)

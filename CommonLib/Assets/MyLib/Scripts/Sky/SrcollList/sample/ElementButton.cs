@@ -10,7 +10,7 @@ public class ElementButton : SkyElementBase
 	private TimeRecord timeRecord;
 	bool isSpecial = false;
 
-	public override void Init (int index, SkyScrollPanel mySkyScrollPanel)
+	public override bool Init (int index, SkyScrollPanel mySkyScrollPanel)
 	{
 		base.Init (index, mySkyScrollPanel);
 		ElementButtonConfig config = ((ElementButtonConfig)(MySkyScrollPanel.Config));
@@ -27,6 +27,7 @@ public class ElementButton : SkyElementBase
 		if (isSpecial) {
 			timeRecord = new TimeRecord ("test", SkyTime.MINUTE * 10, false);
 		}
+		return true;
 	}
 
 	void Update ()

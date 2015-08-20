@@ -23,7 +23,6 @@ public class SkyBezierCurveOject : SkyBaseAnimationObject
 
 
 	void Start (){
-
 	}
 
 	public override void Init ()

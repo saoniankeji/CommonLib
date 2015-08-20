@@ -30,7 +30,7 @@ public class ElementButtonConfig : SkyElementConfig
 
 		public ConfigInf[] ConfigInfs;
 
-		public override int getCount ()
+	public override int GetCount ()
 		{ 
 		if (ConfigInfs != null)
 			return ConfigInfs.Length;

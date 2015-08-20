@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace UI.UIComponent.ScrollList
 {
@@ -11,6 +14,7 @@ namespace UI.UIComponent.ScrollList
         public Vector2 ElementLocalSize = new Vector2 (0.8f, 0.8f);
         public int ShowNumber = 1;
         public SkyElementConfig Config;
+        public List<Button> ElementButtons = new List<Button>();
 
         // Use this for initialization
         void Start ()
@@ -32,6 +36,10 @@ namespace UI.UIComponent.ScrollList
             myUpdate ();
         }
 
+        void OnDestroy()
+        {
+        }
+
         protected virtual void myUpdate ()
         {
 
@@ -43,17 +51,24 @@ namespace UI.UIComponent.ScrollList
             myscrollBar = myScrollRect.horizontalScrollbar;
             ((SkyScrollRect)myScrollRect).mySkyOnEndDrag = new SkyScrollRect.SkyOnEndDrag (onEndDrag);
             ((SkyScrollRect)myScrollRect).mySkyOnBeginDrag = new SkyScrollRect.SkyOnBeginDrag (onBeginDrag);
+            ((SkyScrollRect)myScrollRect).mySkyOnDrag = new SkyScrollRect.SkyOnDrag (onDrag);
             myScrollList = GameObject.Find (SCROLL_LIST);
             myGridLayoutGroup = myScrollList.GetComponent<GridLayoutGroup> ();
         }
 
-        protected virtual void onBeginDrag ()
+        protected virtual void onBeginDrag (UnityEngine.EventSystems.PointerEventData eventData)
         {
             //Debug.Log ("Panel OnBeginDrag");
             AutoScroll = false;
         }
 
-        protected virtual void onEndDrag ()
+        protected virtual void onDrag (UnityEngine.EventSystems.PointerEventData eventData)
+        {
+            //Debug.Log ("Panel OnDrag");
+        }
+
+        
+        protected virtual void onEndDrag (UnityEngine.EventSystems.PointerEventData eventData)
         {
             //Debug.Log ("Panel OnEndDrag");
             AutoScroll = true;
@@ -70,10 +85,18 @@ namespace UI.UIComponent.ScrollList
 
         private void addElments ()
         {
-            for (int i=0; i<Config.getCount(); i++) {
+            ElementButtons.Clear();
+            for (int i=0; i<Config.GetCount(); i++) {
                 SkyElementBase element = Instantiate (BaseElement) as SkyElementBase;
                 element.transform.SetParent (myScrollList.gameObject.transform, false);
-                element.Init (i, this);
+                if(!element.Init (i, this)){
+                    Destroy (element.gameObject);
+                } else {
+                    if (element.GetComponent<Button>() != null) {
+
+                        ElementButtons.Add (element.GetComponent<Button>());
+                    }
+                }
             }
         }
 
@@ -87,6 +110,8 @@ namespace UI.UIComponent.ScrollList
                 return 0;
             return myScrollList.transform.childCount;
         }
+
+
 
         protected GameObject myScrollPanel;
         protected Scrollbar myscrollBar;
@@ -119,5 +144,6 @@ namespace UI.UIComponent.ScrollList
         {
           
         }
+
     }
 }
