@@ -48,8 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
      <Compile Include="Assets\Libs\codeandweb.com\Editor\TexturePackerImporter.cs" />
-     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\Editor\SkyBezierEditor.cs" />
-     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAnimation\Editor\SkyMoveByCurveEditor.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAction\Editor\SkyBezierEditor.cs" />
+     <Compile Include="Assets\MyLib\Scripts\Sky\SkyAction\Editor\SkyMoveByCurveEditor.cs" />
      <Compile Include="Assets\MyLib\Scripts\Sky\UI\Editor\SpriteTextEditor.cs" />
      <None Include="Assets\MyLib\Shaders\UVAnimation.shader" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
