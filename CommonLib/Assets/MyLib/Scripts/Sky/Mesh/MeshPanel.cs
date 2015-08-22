@@ -6,10 +6,10 @@ using System;
 [ExecuteInEditMode,RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class MeshPanel : MonoBehaviour
 {
-	public float Width;
-	public float shadoWidth;
+	public float Width = 5;
+	public float shadoWidth=5;
 //	public Color MianColor;
-//	public Color ShodowColor;
+//	public Color ShodowColor;  
 
 	public List<Line> Lines;
 	public bool shadowOn = true;
@@ -37,6 +37,14 @@ public class MeshPanel : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
+		#if UNITY_EDITOR
+				isDirty = true;
+				MeshRectangle ();
+
+		#else
+		
+		#endif
 //		isDirty = true;
 //		MeshRectangle ();
 		CreateMesh ();
